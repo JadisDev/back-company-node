@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
-import CompanyUserController from './app/controllers/companyUserController';
+import CompanyUserController from './app/controllers/CompanyUserController';
 import authMiddleware from './app/middlewares/auth';
 import corsMiddleware from './app/middlewares/cors';
 // import cors from 'cors';
