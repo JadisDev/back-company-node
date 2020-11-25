@@ -6,12 +6,12 @@ services:
     container_name: mongodb
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: demontie
-      MONGO_INITDB_ROOT_PASSWORD: senha
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
 
   api:
-    image: api-fortbrasil
-    container_name: api-fortbrasil
+    image: back-fortbrasil
+    container_name: back-fortbrasil
     build: .
     env_file:
       - ./.env
