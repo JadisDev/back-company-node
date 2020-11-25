@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+   db:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: demontie
+      MONGO_INITDB_ROOT_PASSWORD: senha
+
+  api:
+    image: api-fortbrasil
+    container_name: api-fortbrasil
+    build: .
+    env_file:
+      - ./.env
+    ports:
+      - 3333:3333
+    restart: always
+    stdin_open: true
+    tty: true
