@@ -10,7 +10,7 @@ class UserController {
       const user = await User.create(req.body);
       return res.json({ user });
     } catch (err) {
-      return res.status(400).json({ error: req.body });
+      return res.status(400).json({ error: err.message });
     }
   }
 }

@@ -41,3 +41,5 @@ Api restful
 3 - cp .env.example .env
 
 4 - docker-compose up -d (linux)
+
+5 - npm run dev na raíz do projeto

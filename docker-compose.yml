@@ -3,20 +3,10 @@ version: "3"
 services:
   db:
     image: mongo
-    container_name: mongodb
-    restart: always
+    container_name: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
-
-  api:
-    image: back-fortbrasil
-    container_name: back-fortbrasil
-    build: .
-    env_file:
-      - ./.env
+      MONGO_INITDB_DATABASE: backcompanyfort
     ports:
-      - 3333:3333
-    restart: always
-    stdin_open: true
-    tty: true
+      - 27018:27017
